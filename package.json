@@ -1,0 +1,31 @@
+{
+  "name": "food-ordering-app",
+  "version": "1.0.0",
+  "description": "This is food ordering app by Abhishek Kaushik",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaushik-abhishek/food-ordering-app.git"
+  },
+  "keywords": [],
+  "author": "Abhishek Kaushik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kaushik-abhishek/food-ordering-app/issues"
+  },
+  "homepage": "https://github.com/kaushik-abhishek/food-ordering-app#readme",
+  "devDependencies": {
+    "parcel": "^2.10.3",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "browserlist": [
+    "last 2 versions"
+    ]
+  
+}
