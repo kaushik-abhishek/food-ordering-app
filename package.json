@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "This is food ordering app by Abhishek Kaushik",
   "scripts": {
+    "start":"parcel index.html",
+    "build": "parcel build index.html",
     "test": "jest"
+
   },
   "repository": {
     "type": "git",
