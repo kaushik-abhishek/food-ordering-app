@@ -5,6 +5,7 @@
 }
 .logo {
   width: 150px;
+  cursor: pointer;
 }
 .nav-items {
   padding: 0px 20px;
@@ -38,3 +39,8 @@
 .res-logo {
   width: 100%;
 }
+
+.filter-btn {
+    margin: 10px;
+    cursor: pointer;
+   }
