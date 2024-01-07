@@ -3,10 +3,9 @@
   "version": "1.0.0",
   "description": "This is food ordering app by Abhishek Kaushik",
   "scripts": {
-    "start":"parcel index.html",
+    "start": "parcel index.html",
     "build": "parcel build index.html",
     "test": "jest"
-
   },
   "repository": {
     "type": "git",
@@ -25,10 +24,10 @@
   },
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.21.1"
   },
   "browserlist": [
     "last 2 versions"
-    ]
-  
+  ]
 }
