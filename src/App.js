@@ -12,6 +12,7 @@ import UserContext from "./utils/userContext";
 import { Provider } from "react-redux";
 import appStore from "./utils/appStore";
 import Cart from "./component/cart";
+import Footer from "./component/Footer";
 
 const Grocery = lazy(() => import("./component/Grocery"));
 
@@ -29,6 +30,7 @@ const AppLayout = () => {
         <div className="app">
           <Header />
           <Outlet />
+          <Footer />
         </div>
       </UserContext.Provider>
     </Provider>
