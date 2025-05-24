@@ -1,18 +1,18 @@
-import React, { lazy, Suspense, useEffect, useState } from "react";
+import { lazy, Suspense, useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
-import Header from "./component/Header";
-import Body from "./component/Body";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
-import Contact from "./component/Contact";
 import About from "./component/About";
+import Body from "./component/Body";
+import Contact from "./component/Contact";
 import Error from "./component/Error";
+import Header from "./component/Header";
 import RestaurantMenuPage from "./component/RestaurantMenuPage";
-import UserContext from "./utils/userContext";
 //import Grocery from "./component/Grocery";
 import { Provider } from "react-redux";
-import appStore from "./utils/appStore";
 import Cart from "./component/cart";
 import Footer from "./component/Footer";
+import appStore from "./utils/appStore";
+import UserContext from "./utils/UserContext";
 
 const Grocery = lazy(() => import("./component/Grocery"));
 
