@@ -1,7 +1,7 @@
 import { LOGO_URL } from "../utils/constants";
 import { useEffect, useState, useContext } from "react";
 import { Link } from "react-router-dom";
-import UserContext from "../utils/userContext";
+import UserContext from "../utils/UserContext";
 import { useSelector } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
