@@ -9,10 +9,10 @@ import Header from "./component/Header";
 import RestaurantMenuPage from "./component/RestaurantMenuPage";
 //import Grocery from "./component/Grocery";
 import { Provider } from "react-redux";
-import Cart from "./component/cart";
 import Footer from "./component/Footer";
 import appStore from "./utils/appStore";
 import UserContext from "./utils/UserContext";
+import Cart from "./component/Cart";
 
 const Grocery = lazy(() => import("./component/Grocery"));
 
