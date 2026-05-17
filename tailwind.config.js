@@ -9,8 +9,16 @@ module.exports = {
       xl: '1440px'
     },
     extend: {
-      colors: { //adding custom colors
-        brightRed: 'hsl(12, 88%, 59%)'
+      colors: {
+        brightRed: 'hsl(12, 88%, 59%)',
+        primary: {
+          DEFAULT: '#ff5200',
+          hover: '#e64a00',
+          light: '#fff0e5',
+        }
+      },
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
       }
     },
   },

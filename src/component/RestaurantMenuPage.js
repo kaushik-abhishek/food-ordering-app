@@ -5,8 +5,6 @@ import RestaurantCategory from "./RestaurantCategory";
 import { useState } from "react";
 
 const RestaurantMenuPage = () => {
-  const dummy = "dummy data";
-
   const { resId } = useParams();
 
   const resInfo = useRestaurantMenu(resId);
@@ -19,8 +17,6 @@ const RestaurantMenuPage = () => {
 
   const { name, cuisines, costForTwoMessage } =
     resInfo?.cards[2]?.card?.card?.info;
-  const { itemCards } =  
-    resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card;
 
   const categories =
     resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
@@ -43,7 +39,6 @@ const RestaurantMenuPage = () => {
           data={categories?.card?.card}
           showItems={index === showIndex ? true : false}
           setShowIndex={() => setShowIndex(index)}
-          dummy = {dummy}
         />
       ))}
     </div>

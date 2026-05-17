@@ -12,45 +12,35 @@ import Corousels from "./Corousels";
 import CorouselCusines from "./CorouselCusines";
 import TopRestaurantCarousels from "./TopRestaurantCarousels";
 import Applyfilters from "./Applyfilters";
-import { Swiggy_API } from "../utils/constants";
 import useListOfRestro from "../utils/useListOfRestro";
-import useUpdateRestro from "../utils/useUpdateRestro";
 // import Footer from "./Footer";
+
+const RestaurantCardPromoted = withpromotedLabel(RestaurantCard);
 
 const Body = () => {
   //local state variable - super powerful variable
   const [filteredRestaurant, setFilteredRestaurant] = useState([]);
   const [searchText, setSearchText] = useState("");
 
-  const RestaurantCardPromoted = withpromotedLabel(RestaurantCard);
   //when state variable update, react trigger reconciliation cycle(re-renders the component)
   // console.log("Body Rendered", listOfRestaurants);
 
-  useEffect(() => {
-    fetchData();
-  }, []);
 
-  const fetchData = async () => {
-    const data = await fetch(Swiggy_API);
-    const json = await data.json(); //converting data into json;
-    setFilteredRestaurant(
-      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-    );
-  };
   //custom hook
   const bannerInfo = useBanner();
   const cusinesInfo = useCusines();
   const topRestro = useTopRestro();
   const listOfRestaurants = useListOfRestro();
-  // const updateRes = useUpdateRestro();
 
-  // const allRestro = listOfRestaurants.concat(updateRes);
-  // console.log(allRestro);
+  // Sync filteredRestaurant when the list loads for the first time
+  useEffect(() => {
+    if (listOfRestaurants?.length > 0 && filteredRestaurant.length === 0) {
+      setFilteredRestaurant(listOfRestaurants);
+    }
+  }, [listOfRestaurants]);
   // console.log(listOfRestaurants);
   // console.log(updateRes);
 
-  // const { loggedInUser, setUserName } = useContext(UserContext);
-  console.log("bannerInfo", bannerInfo);
   return bannerInfo.length === 0 &&
     cusinesInfo.length === 0 &&
     topRestro.length === 0 &&
@@ -62,16 +52,16 @@ const Body = () => {
         <h1 className="text-3xl font-bold my-4 ml-6">Best offers for you</h1>
       )}
       {bannerInfo.length !== 0 && <Corousels bannerInfo={bannerInfo} />} */}
-      <h1 className="text-3xl font-bold my-4 ml-6">What's in your mind?</h1>
+      <h1 className="text-3xl font-extrabold my-6 ml-6 text-gray-800 tracking-tight">What's in your mind?</h1>
       {/* 2nd crousel */}
       <CorouselCusines cusinesInfo={cusinesInfo} />
       <hr className="w-12/12 h-[0.08rem] mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-200 mt-10" />
-      <h1 className="text-3xl font-bold my-4 ml-6">
+      <h1 className="text-3xl font-extrabold my-6 ml-6 text-gray-800 tracking-tight">
         Top restaurant chains in Bangalore
       </h1>
       <TopRestaurantCarousels topRestro={topRestro} />
       <hr className="w-12/12 h-[0.08rem] mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-200 mt-10" />
-      <h1 className="text-3xl font-bold my-4 ml-6">
+      <h1 className="text-3xl font-extrabold my-6 ml-6 text-gray-800 tracking-tight">
         Restaurants with online food delivery in Bangalore
       </h1>
       <Applyfilters
@@ -79,19 +69,19 @@ const Body = () => {
         listOfRestaurants={listOfRestaurants}
       />
       {/* <FilterPopsUp /> */}
-      <div className="flex items-center">
-        <div className="search m-2 p-2">
+      <div className="flex items-center my-6 ml-4">
+        <div className="relative search flex items-center shadow-sm rounded-full overflow-hidden border border-gray-200 bg-white focus-within:shadow-md focus-within:border-primary transition-all duration-300 w-full max-w-lg">
           <input
             type="text"
-            className="border shadow-md h-[40px] w-[250px] rounded-2xl p-4 outline-none text-base font-semibold text-gray-600"
+            className="w-full h-12 pl-6 pr-4 outline-none text-base font-medium text-gray-700 bg-transparent"
             value={searchText}
-            placeholder="Search me (It works !!!)"
+            placeholder="Search for restaurants and food..."
             onChange={(e) => {
               setSearchText(e.target.value);
             }}
           />
           <button
-            className="px-2 py-2 rounded-2xl border border-solid mx-4 bg-white shadow-md"
+            className="h-12 px-6 font-bold text-white bg-primary hover:bg-primary-hover transition-colors duration-300 flex items-center justify-center"
             onClick={() => {
               console.log(searchText);
               const filteredRestaurant = listOfRestaurants.filter((res) =>
@@ -133,7 +123,7 @@ const Body = () => {
       {/* safasdf */}
 
       <br />
-      <div className="flex flex-wrap">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4">
         {filteredRestaurant?.map((restaurant) => (
           <Link
             key={restaurant.info.id}

@@ -3,10 +3,8 @@ import { RES_IMG_URL } from "../utils/constants";
 import { addItems } from "../utils/cartSlice";
 
 
-const ItemList = ({ items, dummy }) => {
+const ItemList = ({ items }) => {
 
-//    console.log(dummy);
-  //console.log(items);
 
   const dispatch = useDispatch();
   const handleItem = (item) => {

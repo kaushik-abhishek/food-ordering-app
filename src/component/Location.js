@@ -41,10 +41,13 @@ export const Location = () => {
     <div className="flex items-center">
       {/* Aligns items to the center */}
       <button
-        className="find-me font-medium text-lg mr-96" // Added mr-4 to create some space between button and address
+        className="flex flex-col items-start group whitespace-nowrap"
         onClick={handleFindMe}
       >
-        <u className="pb-2 ">Find your area</u>
+        <div className="flex items-center text-gray-800 font-bold group-hover:text-primary transition-colors">
+          <span className="border-b-2 border-gray-800 group-hover:border-primary pb-0.5">Find your area</span>
+          <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
+        </div>
         {address && (
           <p className="address text-sm text-justify">Address: {address}</p>
         )}

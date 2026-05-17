@@ -1,0 +1,97 @@
+{
+  "data": {
+    "cards": [
+      {},
+      {},
+      {
+        "card": {
+          "card": {
+            "info": {
+              "id": "1",
+              "name": "Fallback Mock Restaurant",
+              "city": "Bangalore",
+              "cuisines": ["Pizzas", "Fast Food", "Italian"],
+              "costForTwoMessage": "₹400 for two",
+              "avgRating": 4.2
+            }
+          }
+        }
+      },
+      {},
+      {
+        "groupedCard": {
+          "cardGroupMap": {
+            "REGULAR": {
+              "cards": [
+                {
+                  "card": {
+                    "card": {
+                      "@type": "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory",
+                      "title": "Recommended",
+                      "itemCards": [
+                        {
+                          "card": {
+                            "info": {
+                              "id": "101",
+                              "name": "Margherita Pizza",
+                              "price": 19900,
+                              "description": "A classic delight with 100% real mozzarella cheese.",
+                              "imageId": "dp5f1qokd8yid8g325x4"
+                            }
+                          }
+                        },
+                        {
+                          "card": {
+                            "info": {
+                              "id": "102",
+                              "name": "Farmhouse Pizza",
+                              "price": 39900,
+                              "description": "Delightful combination of onion, capsicum, tomato & grilled mushroom.",
+                              "imageId": "b96g6womwq3i8n89p2h8"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "card": {
+                    "card": {
+                      "@type": "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory",
+                      "title": "Sides & Beverages",
+                      "itemCards": [
+                        {
+                          "card": {
+                            "info": {
+                              "id": "201",
+                              "name": "Garlic Breadsticks",
+                              "price": 9900,
+                              "description": "Baked to perfection. Your perfect pizza partner! Tastes best with dip.",
+                              "imageId": "a3j6xofww5xwzng33p9y"
+                            }
+                          }
+                        },
+                        {
+                          "card": {
+                            "info": {
+                              "id": "202",
+                              "name": "Pepsi (500ml)",
+                              "price": 6000,
+                              "description": "Refreshing beverage.",
+                              "imageId": "y7v2j9u8v7w0o4k6m1q5"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}

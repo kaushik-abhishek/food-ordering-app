@@ -20,7 +20,7 @@ const CorouselCusines = ({ cusinesInfo }) => {
   );
 
   // const cusinesInfo = useCusines();
-  console.log(cusinesInfo);
+  // console.log(cusinesInfo);
   return (
     <>
       <Swiper

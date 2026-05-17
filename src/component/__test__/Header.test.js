@@ -18,7 +18,7 @@ test("should load Header component with Login button", () => {
 
   //We can also write as
 
-  const loginButton = screen.getByRole("button", { name: "Login" });
+  const loginButton = screen.getByRole("button", { name: "Sign In" });
   expect(loginButton).toBeInTheDocument();
 });
 
@@ -47,9 +47,9 @@ test("should show the logout button on click login button", () => {
 
   //We can also write as
 
-  const loginButton = screen.getByRole("button", { name: "Login" });
+  const loginButton = screen.getByRole("button", { name: "Sign In" });
   fireEvent.click(loginButton);
 
-  const logoutButton = screen.getByRole("button", { name: "Logout" });
+  const logoutButton = screen.getByRole("button", { name: "Sign Out" });
   expect(logoutButton).toBeInTheDocument();
 });

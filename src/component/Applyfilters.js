@@ -1,32 +1,32 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpZA } from "@fortawesome/free-solid-svg-icons";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const Applyfilters = ({ listOfRestaurants, setFilteredRestaurant }) => {
   const [openPops, setOpenPops] = useState(false);
   return (
-    <div className="flex ml-4 space-x-4">
+    <div className="flex flex-wrap items-center ml-4 gap-3 my-4">
       <button
-        className="h-10 w-24 rounded-2xl border border-solid bg-white shadow-md"
+        className="px-4 py-2 flex items-center rounded-full border border-gray-300 bg-white shadow-sm hover:shadow-md hover:border-gray-400 transition-all duration-200 text-sm font-semibold text-gray-700"
         onClick={() => setOpenPops(true)}
       >
-        <span className="p-2">Filter</span>
-        <FontAwesomeIcon icon={faArrowUpZA} style={{ color: "#000000" }} />
+        <span className="mr-2">Filter</span>
+        <FontAwesomeIcon icon={faArrowUpZA} className="text-gray-600" />
       </button>
       {/* <FilterPopsUp open={openPops} onClose={setOpenPops(false)} /> */}
-      <button className="h-10 w-24 rounded-2xl border border-solid bg-white shadow-md">
-        <span className="p-2">Sort By</span>
-        <FontAwesomeIcon icon={faChevronDown} style={{ color: "#000000" }} />
+      <button className="px-4 py-2 flex items-center rounded-full border border-gray-300 bg-white shadow-sm hover:shadow-md hover:border-gray-400 transition-all duration-200 text-sm font-semibold text-gray-700">
+        <span className="mr-2">Sort By</span>
+        <FontAwesomeIcon icon={faChevronDown} className="text-gray-600" />
       </button>
-      <button className="h-10 w-28 rounded-2xl border border-solid bg-white shadow-md">
-        <span className="p-2">Fast Delivary</span>
+      <button className="px-4 py-2 rounded-full border border-gray-300 bg-white shadow-sm hover:shadow-md hover:border-gray-400 transition-all duration-200 text-sm font-semibold text-gray-700">
+        Fast Delivery
       </button>
-      <button className="h-10 w-32 rounded-2xl border border-solid bg-white shadow-md">
-        <span className="p-2">New on Swiggy</span>
+      <button className="px-4 py-2 rounded-full border border-gray-300 bg-white shadow-sm hover:shadow-md hover:border-gray-400 transition-all duration-200 text-sm font-semibold text-gray-700">
+        New on Swiggy
       </button>
       <button
-        className="h-10 w-28 rounded-2xl border border-solid bg-white shadow-md"
+        className="px-4 py-2 rounded-full border border-gray-300 bg-white shadow-sm hover:shadow-md hover:bg-primary-light hover:border-primary hover:text-primary transition-all duration-200 text-sm font-semibold text-gray-700"
         onClick={() => {
           const filterRestaurant = listOfRestaurants.filter(
             (res) => res.info.avgRating > 4.2
@@ -34,19 +34,19 @@ const Applyfilters = ({ listOfRestaurants, setFilteredRestaurant }) => {
           setFilteredRestaurant(filterRestaurant);
         }}
       >
-        <span className="p-2">Rating 4.2+</span>
+        Rating 4.2+
       </button>
-      <button className="h-10 w-24 rounded-2xl border border-solid bg-white shadow-md">
-        <span className="p-2">Pure Veg</span>
+      <button className="px-4 py-2 rounded-full border border-gray-300 bg-white shadow-sm hover:shadow-md hover:border-gray-400 transition-all duration-200 text-sm font-semibold text-gray-700">
+        Pure Veg
       </button>
-      <button className="h-10 w-20 rounded-2xl border border-solid bg-white shadow-md">
-        <span className="p-2">Offers</span>
+      <button className="px-4 py-2 rounded-full border border-gray-300 bg-white shadow-sm hover:shadow-md hover:border-gray-400 transition-all duration-200 text-sm font-semibold text-gray-700">
+        Offers
       </button>
-      <button className="h-10 w-32 rounded-2xl border border-solid bg-white shadow-md">
-        <span className="p-2">Rs.300-Rs.600</span>
+      <button className="px-4 py-2 rounded-full border border-gray-300 bg-white shadow-sm hover:shadow-md hover:border-gray-400 transition-all duration-200 text-sm font-semibold text-gray-700">
+        Rs.300-Rs.600
       </button>
-      <button className="h-10 w-36 rounded-2xl border border-solid bg-white shadow-md">
-        <span className="p-2">Less than Rs.300</span>
+      <button className="px-4 py-2 rounded-full border border-gray-300 bg-white shadow-sm hover:shadow-md hover:border-gray-400 transition-all duration-200 text-sm font-semibold text-gray-700">
+        Less than Rs.300
       </button>
     </div>
   );

@@ -5,7 +5,7 @@ import UserContext from "../utils/UserContext";
 class About extends Component {
   constructor(props) {
     super(props);
-    console.log("Parent contstruct call");
+    console.log("Parent constructor called");
   }
 
   componentDidMount() {
@@ -19,9 +19,9 @@ class About extends Component {
         <h1>About</h1>
         <div>
           <UserContext.Consumer>
-            {(({loggedInUser}) => (
+            {({ loggedInUser }) => (
               <h1>{loggedInUser}</h1>
-            ))}
+            )}
           </UserContext.Consumer>
         </div>
         <h2>this is food ordering app</h2>
