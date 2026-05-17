@@ -17,7 +17,32 @@
           }
         }
       },
-      {},
+      {
+        "card": {
+          "card": {
+            "gridElements": {
+              "infoWithStyle": {
+                "offers": [
+                  {
+                    "info": {
+                      "header": "Extra ₹50 Off",
+                      "offerTagColor": "#526BFF",
+                      "description": "NO CODE REQUIRED | ABOVE ₹299"
+                    }
+                  },
+                  {
+                    "info": {
+                      "header": "Flat 50% Off",
+                      "offerTagColor": "#E46D47",
+                      "description": "NO CODE REQUIRED"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
       {
         "groupedCard": {
           "cardGroupMap": {

@@ -39,7 +39,7 @@ const Header = () => {
             </Link>
           </li>
           <li className="px-4 font-medium text-gray-700 text-lg hover:text-primary transition duration-200">
-            <Link to="/offers" className="flex items-center group">
+            <Link to="/" className="flex items-center group">
               <svg
                 className="mr-2 group-hover:scale-110 transition-transform"
                 viewBox="0 0 32 32"
@@ -56,7 +56,7 @@ const Header = () => {
             </Link>
           </li>
           <li className="px-4 font-medium text-gray-700 text-lg hover:text-primary transition duration-200">
-            <Link to="/help" className="flex items-center group">
+            <Link to="/" className="flex items-center group">
               <span>
                 <svg
                   className="mr-2 group-hover:scale-110 transition-transform"

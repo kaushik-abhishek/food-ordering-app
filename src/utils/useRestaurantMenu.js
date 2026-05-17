@@ -10,7 +10,18 @@ const useRestaurantMenu = (resId) => {
   }, []);
   const fetchMenu = async () => {
     try {
-      const data = await fetch(MENU_API1 + resId + MENU_API2);
+      const urlParams = new URLSearchParams(window.location.search);
+      const query = urlParams.get("query");
+      const metaData = urlParams.get("metaData");
+
+      let apiUrl = MENU_API1 + resId + MENU_API2;
+      
+      // If the user clicked a specific dish from search, append the filtered API params
+      if (query && metaData) {
+        apiUrl = `/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9715987&lng=77.5945627&restaurantId=${resId}&catalog_qa=undefined&query=${encodeURIComponent(query)}&metaData=${encodeURIComponent(metaData)}&submitAction=SUGGESTION`;
+      }
+
+      const data = await fetch(apiUrl);
       
       // If response is not ok or it's a 202 Accepted (Swiggy bot block), throw to fallback
       if (!data.ok || data.status === 202) {

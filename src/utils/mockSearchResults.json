@@ -1,0 +1,82 @@
+{
+  "data": {
+    "cards": [
+      {
+        "groupedCard": {
+          "cardGroupMap": {
+            "DISH": {
+              "cards": [
+                {
+                  "card": {
+                    "card": {
+                      "info": {
+                        "id": "1",
+                        "name": "Double Egg Dosa",
+                        "price": 14900,
+                        "imageId": "dp5f1qokd8yid8g325x4",
+                        "description": "Crispy dosa folded with double egg roast.",
+                        "isVeg": 0
+                      },
+                      "restaurant": {
+                        "info": {
+                          "id": "1001",
+                          "name": "By Dosa Chicken Curry & Tiffins",
+                          "avgRating": 4.5,
+                          "sla": { "slaString": "40-45 MINS" }
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "card": {
+                    "card": {
+                      "info": {
+                        "id": "2",
+                        "name": "Ghee Masala Dosa",
+                        "price": 18600,
+                        "imageId": "b96g6womwq3i8n89p2h8",
+                        "description": "Classic dosa roasted in fresh ghee with potato masala.",
+                        "isVeg": 1
+                      },
+                      "restaurant": {
+                        "info": {
+                          "id": "1002",
+                          "name": "By Cafe Amudham",
+                          "avgRating": 4.5,
+                          "sla": { "slaString": "20-25 MINS" }
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "card": {
+                    "card": {
+                      "info": {
+                        "id": "3",
+                        "name": "Onion Rava Dosa",
+                        "price": 12000,
+                        "imageId": "a3j6xofww5xwzng33p9y",
+                        "description": "Crispy semolina dosa mixed with chopped onions.",
+                        "isVeg": 1
+                      },
+                      "restaurant": {
+                        "info": {
+                          "id": "1003",
+                          "name": "By Namaste",
+                          "avgRating": 4.3,
+                          "sla": { "slaString": "30-35 MINS" }
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}

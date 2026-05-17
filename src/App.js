@@ -7,6 +7,7 @@ import Contact from "./component/Contact";
 import Error from "./component/Error";
 import Header from "./component/Header";
 import RestaurantMenuPage from "./component/RestaurantMenuPage";
+import Search from "./component/Search";
 //import Grocery from "./component/Grocery";
 import { Provider } from "react-redux";
 import Footer from "./component/Footer";
@@ -53,6 +54,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact />,
+      },
+      {
+        path: "/search",
+        element: <Search />,
       },
       {
         path: "/cart",
